@@ -4,7 +4,7 @@ div#countup {
     width: 100vw;
     height: 100vh;
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
     position: relative;
 }
 
@@ -13,12 +13,13 @@ div#countup {
 }
 
 .timeamount {
-    font-size: 35px;
+    font-size: 2.5em;
 }
 
 .countup-header {
-    font-size: 30px;
+    font-size: 4em;
     text-transform: capitalize;
+    font-family: 'Amatic SC', cursive;
 }
 
 .countup-container {
@@ -27,6 +28,10 @@ div#countup {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+.timer-content {
+    font-family: 'Roboto', sans-serif;
 }
 
 .timer-content .even-smaller * {
@@ -38,9 +43,8 @@ div#countup {
 }
 
 .countup-header p {
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 }
-
 
 @media (min-width:600px) {
     .col-sm-2.even-smaller {
@@ -51,7 +55,7 @@ div#countup {
     }
     
     .countup-header {
-        font-size: 50px;
+        font-size: 7em;
         position: relative;
         height: 45%;
     }
@@ -73,4 +77,10 @@ div#countup {
         transform: translate(-50%,-50%);
     }
     
+}
+
+@media (min-width: 1200px) {
+    .timeamount {
+        font-size: 4em;
+    }
 }
