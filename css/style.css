@@ -12,6 +12,50 @@ div#countup {
     position: relative;
 }
 
+/********************************************************
+Box Placements
+********************************************************/
+
+.countup-container, .timer-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.countup-header {
+    position: relative;
+    height: 19%;
+}
+
+.timer-content {
+    position: relative;
+    height: 100%;
+}
+
+.vertical-center-content {
+    position: absolute;
+    width: 100%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media (min-width:600px) {
+    .vertical-center-content {
+        top: 50%;
+    }
+    
+    .countup-header {
+        height: 40%;
+    }
+}
+
+/********************************************************/
+
+/********************************************************
+Font Layout
+********************************************************/
+
 .countup-header h1 {
     font-size: 2.25em;
     text-transform: capitalize;
@@ -19,19 +63,11 @@ div#countup {
 }
 
 .timeamount {
-    font-size: 1.75em;
+    font-size: 2.25em;
 }
 
 .timelabel {
     font-size: 1em;
-}
-
-.countup-container {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 }
 
 .timer-content .even-smaller * {
@@ -42,6 +78,28 @@ div#countup {
     margin-bottom: 25px;
 }
 
+@media (max-width:350px) {
+    .countup-header h1 {
+        font-size: 1.75em;
+    }
+
+    .timeamount {
+        font-size: 1.75em;
+    }
+
+    .timelabel {
+        font-size: 1em;
+    }
+
+    .timer-content .even-smaller * {
+        margin: 0px;
+    }
+
+    .timer-content .even-smaller {
+        margin-bottom: 25px;
+    }
+}
+
 @media (min-width:600px) {
     .col-sm-2.even-smaller {
         width: 20%;
@@ -50,38 +108,12 @@ div#countup {
         text-align: center;
     }
     
-    .countup-header {
-        position: relative;
-        height: 45%;
-    }
-    
     .countup-header h1 {
         font-size: 4em;
     }
-    
-    .countup-container {
-        position: relative;
-        transform: initial;
-        top: initial;
-        left: initial;
-        height: 100%;
-        width: 100%;
-    }
-    
-    .vertical-center-content {
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-    
 }
 
-@media (min-width: 1200px) {
-    .countup-header h1 {
-        font-size: 6em;
-    }
+@media (min-width: 1024px) {
     
     .timeamount {
         font-size: 3em;
@@ -89,5 +121,11 @@ div#countup {
     
     .timelabel {
         font-size: 1.75em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .countup-header h1 {
+        font-size: 6em;
     }
 }
