@@ -2,7 +2,7 @@ body {
     font-family: 'Prata', serif;
 }
 
-div#countup {
+div#countup, div#diff-times {
     background-color: #CE0000;
     color: ghostwhite;
     width: 100vw;
@@ -10,6 +10,21 @@ div#countup {
     text-align: center;
     font-weight: 400;
     position: relative;
+}
+
+.down-page-arrow {
+    position: absolute;
+    bottom: 2%;
+    right: 45.5%;
+    font-size: 50px;
+    color: #323232;
+    opacity: 0.5;
+}
+
+@media (min-width:600px) {
+    .down-page-arrow {
+        right: 50%;
+    }
 }
 
 /********************************************************
