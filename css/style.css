@@ -12,6 +12,10 @@ div#countup, div#diff-times {
     position: relative;
 }
 
+/********************************************************
+Downpage Arrows
+********************************************************/
+
 .down-page-arrow {
     position: absolute;
     bottom: 2%;
@@ -28,21 +32,34 @@ div#countup, div#diff-times {
 }
 
 /********************************************************
-Box Placements
+Bootstrap Grid Edits
 ********************************************************/
 
-.countup-container, .timer-container{
+@media (min-width:600px) {
+    .col-sm-2.even-smaller {
+        width: 20%;
+        float: left;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+/********************************************************
+Vertical Centering Placements
+********************************************************/
+
+.align-container {
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-.countup-header {
+.align-header {
     position: relative;
     height: 19%;
 }
 
-.timer-content {
+.align-content {
     position: relative;
     height: 100%;
 }
@@ -56,11 +73,12 @@ Box Placements
 }
 
 @media (min-width:600px) {
+    
     .vertical-center-content {
-        top: 50%;
+        top: 60%;
     }
     
-    .countup-header {
+    .align-header {
         height: 40%;
     }
 }
@@ -71,7 +89,7 @@ Box Placements
 Font Layout
 ********************************************************/
 
-.countup-header h1 {
+.align-header h1 {
     font-size: 2.25em;
     text-transform: capitalize;
     padding-bottom: 15px;
@@ -85,16 +103,16 @@ Font Layout
     font-size: 1em;
 }
 
-.timer-content .even-smaller * {
+.align-content .even-smaller * {
     margin: 0px;
 }
 
-.timer-content .even-smaller {
+.align-content .even-smaller {
     margin-bottom: 25px;
 }
 
 @media (max-width:350px) {
-    .countup-header h1 {
+    .align-header h1 {
         font-size: 1.75em;
     }
 
@@ -106,24 +124,18 @@ Font Layout
         font-size: 1em;
     }
 
-    .timer-content .even-smaller * {
+    .align-content .even-smaller * {
         margin: 0px;
     }
 
-    .timer-content .even-smaller {
+    .align-content .even-smaller {
         margin-bottom: 25px;
     }
 }
 
 @media (min-width:600px) {
-    .col-sm-2.even-smaller {
-        width: 20%;
-        float: left;
-        margin: auto;
-        text-align: center;
-    }
     
-    .countup-header h1 {
+    .align-header h1 {
         font-size: 4em;
     }
 }
@@ -140,7 +152,7 @@ Font Layout
 }
 
 @media (min-width: 1200px) {
-    .countup-header h1 {
+    .align-header h1 {
         font-size: 6em;
     }
 }
