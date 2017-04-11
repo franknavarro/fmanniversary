@@ -1,3 +1,7 @@
+body {
+    font-family: 'Prata', serif;
+}
+
 div#countup {
     background-color: #CE0000;
     color: ghostwhite;
@@ -8,18 +12,18 @@ div#countup {
     position: relative;
 }
 
-.timelabel {
-    font-size: 20px;
+.countup-header h1 {
+    font-size: 2.25em;
+    text-transform: capitalize;
+    padding-bottom: 15px;
 }
 
 .timeamount {
-    font-size: 2.5em;
+    font-size: 1.75em;
 }
 
-.countup-header {
-    font-size: 4em;
-    text-transform: capitalize;
-    font-family: 'Amatic SC', cursive;
+.timelabel {
+    font-size: 1em;
 }
 
 .countup-container {
@@ -30,20 +34,12 @@ div#countup {
     transform: translate(-50%,-50%);
 }
 
-.timer-content {
-    font-family: 'Roboto', sans-serif;
-}
-
 .timer-content .even-smaller * {
     margin: 0px;
 }
 
 .timer-content .even-smaller {
     margin-bottom: 25px;
-}
-
-.countup-header p {
-    padding-bottom: 15px;
 }
 
 @media (min-width:600px) {
@@ -55,9 +51,12 @@ div#countup {
     }
     
     .countup-header {
-        font-size: 7em;
         position: relative;
         height: 45%;
+    }
+    
+    .countup-header h1 {
+        font-size: 4em;
     }
     
     .countup-container {
@@ -80,7 +79,15 @@ div#countup {
 }
 
 @media (min-width: 1200px) {
+    .countup-header h1 {
+        font-size: 6em;
+    }
+    
     .timeamount {
-        font-size: 4em;
+        font-size: 3em;
+    }
+    
+    .timelabel {
+        font-size: 1.75em;
     }
 }
