@@ -36,7 +36,7 @@ Bootstrap Grid Edits
 ********************************************************/
 
 @media (min-width:600px) {
-    .col-sm-2.even-smaller {
+    .col-sm-2.block-content {
         width: 20%;
         float: left;
         margin: auto;
@@ -78,7 +78,13 @@ Vertical Centering Placements
         top: 60%;
     }
     
-    .align-header {
+    #count-up .align-header {
+        height: 40%;
+    }
+}
+
+@media (min-width:768px) {
+    #diff-times .align-header {
         height: 40%;
     }
 }
@@ -103,12 +109,20 @@ Font Layout
     font-size: 1em;
 }
 
-.align-content .even-smaller * {
+.align-content .block-content * {
     margin: 0px;
 }
 
-.align-content .even-smaller {
+.align-content .block-content {
     margin-bottom: 25px;
+}
+
+#diff-times .block-content {
+    margin-bottom: 6em;
+}
+
+#diff-times .block-content:nth-child(n+5) {
+    margin-bottom: 0px;
 }
 
 @media (max-width:350px) {
@@ -124,18 +138,27 @@ Font Layout
         font-size: 1em;
     }
 
-    .align-content .even-smaller * {
+    .align-content .block-content * {
         margin: 0px;
     }
 
-    .align-content .even-smaller {
+    .align-content .block-content {
         margin-bottom: 25px;
     }
 }
 
 @media (min-width:600px) {
+    #count-up .align-header h1 {
+        font-size: 4em;
+    }
+}
+
+@media (min-width:768px) {
+    #diff-times .block-content:nth-child(n+4) {
+        margin-bottom: 0px;
+    }
     
-    .align-header h1 {
+    #diff-times .align-header h1 {
         font-size: 4em;
     }
 }
