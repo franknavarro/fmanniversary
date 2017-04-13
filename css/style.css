@@ -59,6 +59,10 @@ Vertical Centering Placements
     height: 19%;
 }
 
+#diff-times .align-header {
+    height: 25%;
+}
+
 .align-content {
     position: relative;
     height: 100%;
@@ -78,14 +82,14 @@ Vertical Centering Placements
         top: 60%;
     }
     
-    #count-up .align-header {
+    #countup .align-header {
         height: 40%;
     }
 }
 
 @media (min-width:768px) {
     #diff-times .align-header {
-        height: 40%;
+        height: 30%;
     }
 }
 
@@ -136,7 +140,7 @@ Font Layout
 }
 
 @media (min-width:600px) {
-    #count-up .align-header h1 {
+    #countup .align-header h1 {
         font-size: 4em;
     }
 }
@@ -167,3 +171,5 @@ Font Layout
         font-size: 6em;
     }
 }
+
+
