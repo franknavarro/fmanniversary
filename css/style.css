@@ -80,8 +80,18 @@ Vertical Centering Placements
     transform: translate(-50%,-50%);
 }
 
-.align-footer .vertical-center-content {
+#diff-times .align-footer .vertical-center-content {
     top: 87%;
+}
+
+@media (max-width:600px) {
+    .diff-times .vertical-center-content {
+        top: 50%;
+    }
+
+    .diff-times .align-header .vertical-center-content {
+        top: 45%;
+    }
 }
 
 @media (min-width:600px) {
