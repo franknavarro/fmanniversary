@@ -1,9 +1,9 @@
 body {
     font-family: 'Prata', serif;
+    background-color: #CE0000;
 }
 
-div#countup {
-    background-color: #CE0000;
+div#countup, div#diff-times  {
     color: ghostwhite;
     width: 100vw;
     height: 100vh;
@@ -12,76 +12,189 @@ div#countup {
     position: relative;
 }
 
-.countup-header h1 {
+#canvas {
+    position: absolute;
+}
+
+
+/********************************************************
+Downpage Arrows
+********************************************************/
+
+.down-page-arrow {
+    position: absolute;
+    bottom: 2%;
+    right: 45.5%;
+    font-size: 50px;
+    color: #323232;
+    opacity: 0.5;
+}
+
+a.down-page-arrow:hover, 
+a.down-page-arrow:focus, 
+a.down-page-arrow:active {
+    color: #323232;
+    opacity: 1;
+}
+
+/*.down-page-arrow {
+    display: none;
+}*/
+
+@media (min-width:600px) {
+    .down-page-arrow {
+        right: 50%;
+    }
+}
+
+/********************************************************
+Bootstrap Grid Edits
+********************************************************/
+
+@media (min-width:600px) {
+    .col-sm-2.block-content {
+        width: 20%;
+        float: left;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+/********************************************************
+Vertical Centering Placements
+********************************************************/
+
+.align-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.align-header {
+    position: relative;
+    height: 19%;
+}
+
+#diff-times .align-header {
+    height: 25%;
+}
+
+.align-content {
+    position: relative;
+    height: 100%;
+}
+
+.vertical-center-content {
+    position: absolute;
+    width: 100%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#diff-times .align-footer .vertical-center-content {
+    top: 87%;
+}
+
+@media (max-width:600px) {
+    .diff-times .vertical-center-content {
+        top: 50%;
+    }
+
+    .diff-times .align-header .vertical-center-content {
+        top: 45%;
+    }
+}
+
+@media (min-width:600px) {
+    
+    .vertical-center-content {
+        top: 60%;
+    }
+    
+    #countup .align-header {
+        height: 40%;
+    }
+}
+
+@media (min-width:768px) {
+    #diff-times .align-header {
+        height: 30%;
+    }
+}
+
+/********************************************************/
+
+/********************************************************
+Font Layout
+********************************************************/
+
+.align-header h1 {
     font-size: 2.25em;
     text-transform: capitalize;
     padding-bottom: 15px;
 }
 
+.align-footer h1 {
+    font-size: 2em;
+}
+
 .timeamount {
-    font-size: 1.75em;
+    font-size: 2.25em;
 }
 
 .timelabel {
     font-size: 1em;
 }
 
-.countup-container {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.timer-content .even-smaller * {
+.align-content .block-content * {
     margin: 0px;
 }
 
-.timer-content .even-smaller {
-    margin-bottom: 25px;
+.align-content .block-content {
+    padding-bottom: 25px;
+}
+
+#diff-times .block-content {
+    padding-bottom: 6em;
+}
+
+#diff-times .block-content:nth-child(n+5) {
+    padding-bottom: 0px;
+}
+
+@media (max-width:350px) {
+    .align-header h1,
+    .align-footer h1 {
+        font-size: 1.75em;
+    }
+
+    .timeamount {
+        font-size: 1.75em;
+    }
 }
 
 @media (min-width:600px) {
-    .col-sm-2.even-smaller {
-        width: 20%;
-        float: left;
-        margin: auto;
-        text-align: center;
+    #countup .align-header h1 {
+        font-size: 4em;
+    }
+}
+
+@media (min-width:768px) {
+    #diff-times .block-content:nth-child(n+4) {
+        margin-bottom: 0px;
     }
     
-    .countup-header {
-        position: relative;
-        height: 45%;
-    }
-    
-    .countup-header h1 {
+    #diff-times .align-header h1 {
         font-size: 4em;
     }
     
-    .countup-container {
-        position: relative;
-        transform: initial;
-        top: initial;
-        left: initial;
-        height: 100%;
-        width: 100%;
+    .align-footer h1 {
+        font-size: 3em;
     }
-    
-    .vertical-center-content {
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-    
 }
 
-@media (min-width: 1200px) {
-    .countup-header h1 {
-        font-size: 6em;
-    }
+@media (min-width: 1024px) {
     
     .timeamount {
         font-size: 3em;
@@ -91,3 +204,11 @@ div#countup {
         font-size: 1.75em;
     }
 }
+
+@media (min-width: 1200px) {
+    .align-header h1 {
+        font-size: 6em;
+    }
+}
+
+

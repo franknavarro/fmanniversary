@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Together</title>
+        <title>F+M</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Adamina|Josefin+Slab:400,400i,600,600i,700,700i|Prata|Slabo+27px" rel="stylesheet">
@@ -14,38 +14,84 @@
         <!-- Style Sheet -->
         <link href="css/style.css" rel="stylesheet">
 
+
     </head>
     
     <body>
         
-        
+        <canvas id="canvas"></canvas>
         <div id="countup">
-            <div class="countup-container">
-                <div class="countup-header">
-                    <h1 class="vertical-center-content">We've been together</h1>
+            <div class="align-container">
+                <div class="align-header">
+                    <h1 class="vertical-center-content">We've been together...</h1>
                 </div>
-                <div class="timer-content">
+            </div>
+            <div class="align-container">
+                <div class="align-content">
                     <div class="vertical-center-content">
                         <div class="container">
                             <div class="row">
-                                <div class="col-sm-2 even-smaller">
+                                <div class="col-sm-2 block-content">
                                     <p id="years" class="timeamount">00</p>
-                                    <p class="timelabel">year</p>
+                                    <p class="timelabel">year<span id="year-s">s</span></p>
                                 </div>
-                                <div class="col-sm-2 even-smaller">
+                                <div class="col-sm-2 block-content">
                                     <p id="days" class="timeamount">00</p>
+                                    <p class="timelabel">day<span id="day-s">s</span></p>
+                                </div>
+                                <div class="col-sm-2 block-content">
+                                    <p id="hours" class="timeamount">00</p>
+                                    <p class="timelabel">hour<span id="hour-s">s</span></p>
+                                </div>
+                                <div class="col-sm-2 block-content">
+                                     <p id="minutes" class="timeamount">00</p>
+                                    <p class="timelabel">minute<span id="min-s">s</span></p>
+                                </div>
+                                <div class="col-sm-2 block-content">
+                                    <p id="seconds" class="timeamount">00</p>
+                                    <p class="timelabel">second<span id="sec-s">s</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#diff-times" class="down-page-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+        </div>
+        
+        <div id="diff-times" class="diff-times">
+            <div class="align-container">
+                <div class="align-header">
+                    <h1 class="vertical-center-content">Thats a total of...</h1>
+                </div>
+            </div>
+            <div class="align-container">
+                <div class="align-content">
+                    <div class="vertical-center-content">
+                        <div class="container">
+                            <div class="row totals-row">
+                                <div class="col-sm-4 col-xs-6 block-content block-content">
+                                    <p id="total-years" class="timeamount">00</p>
+                                    <p class="timelabel">year<span id="total-year-s">s</span></p>
+                                </div>
+                                <div class="col-sm-4 col-xs-6 block-content">
+                                    <p id="total-weeks" class="timeamount">00</p>
+                                    <p class="timelabel">weeks</p>
+                                </div>
+                                <div class="col-sm-4 col-xs-6 block-content">
+                                    <p id="total-days" class="timeamount">00</p>
                                     <p class="timelabel">days</p>
                                 </div>
-                                <div class="col-sm-2 even-smaller">
-                                    <p id="hours" class="timeamount">00</p>
+                                <div class="col-sm-4 col-xs-6 block-content">
+                                    <p id="total-hours" class="timeamount">00</p>
                                     <p class="timelabel">hours</p>
                                 </div>
-                                <div class="col-sm-2 even-smaller">
-                                     <p id="minutes" class="timeamount">00</p>
+                                <div class="col-sm-4 col-xs-6 block-content">
+                                     <p id="total-mins" class="timeamount">00</p>
                                     <p class="timelabel">minutes</p>
                                 </div>
-                                <div class="col-sm-2 even-smaller">
-                                    <p id="seconds" class="timeamount">00</p>
+                                <div class="col-sm-4 col-xs-6 block-content">
+                                    <p id="total-secs" class="timeamount">00</p>
                                     <p class="timelabel">seconds</p>
                                 </div>
                             </div>
@@ -53,13 +99,25 @@
                     </div>
                 </div>
             </div>
+            <div class="align-container">
+                <div class="align-footer">
+                    <h1 class="vertical-center-content">And counting...</h1>
+                </div>
+            </div>
         </div>
         
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Count Up Timer -->
         <script src="js/countuptimer.js"></script>
+        <!-- Hearts -->
+        <script src="js/hearts.js"></script>
+        <!-- Custom JavaScript -->
+        <script src="js/script.js"></script>
         <!-- Bootstrap JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <!-- Font Awesome -->
+        <script src="https://use.fontawesome.com/ca73d9a6aa.js"></script>
         
     </body>
 </html>
