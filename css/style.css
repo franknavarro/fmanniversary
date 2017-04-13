@@ -16,6 +16,7 @@ div#countup, div#diff-times  {
     position: absolute;
 }
 
+
 /********************************************************
 Downpage Arrows
 ********************************************************/
@@ -28,6 +29,17 @@ Downpage Arrows
     color: #323232;
     opacity: 0.5;
 }
+
+a.down-page-arrow:hover, 
+a.down-page-arrow:focus, 
+a.down-page-arrow:active {
+    color: #323232;
+    opacity: 1;
+}
+
+/*.down-page-arrow {
+    display: none;
+}*/
 
 @media (min-width:600px) {
     .down-page-arrow {
