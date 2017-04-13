@@ -6,17 +6,36 @@ function upTime(countTo) {
     countTo = new Date(countTo);
     difference = (now-countTo);
 
-    years=Math.floor(difference/(60*60*1000*24*365)*1)
-    days=Math.floor((difference%(60*60*1000*24*365))/(60*60*1000*24)*1);
-    hours=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);
-    mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
-    secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
+    years=Math.floor(difference/(60*60*1000*24*365)*1);
+
+    total_weeks=Math.floor(difference/(60*60*1000*24*7)*1);
+    
+    days=Math.floor(((difference/(60*60*1000*24))%365)*1);
+    total_days=Math.floor(difference/(60*60*1000*24)*1);
+    
+    hours=Math.floor((difference/(60*60*1000)%24)*1);
+    total_hours=Math.floor(difference/(60*60*1000)*1);
+    
+    mins=Math.floor((difference/(60*1000)%60)*1);
+    total_mins=Math.floor(difference/(60*1000)*1);
+    
+    secs=Math.floor((difference/1000)%60*1);
+    total_secs=Math.floor(difference/1000*1);
 
     document.getElementById('years').firstChild.nodeValue = years;
     document.getElementById('days').firstChild.nodeValue = days;
     document.getElementById('hours').firstChild.nodeValue = hours;
     document.getElementById('minutes').firstChild.nodeValue = mins;
     document.getElementById('seconds').firstChild.nodeValue = secs;
+    
+    document.getElementById('total-years').firstChild.nodeValue = years;
+    document.getElementById('total-weeks').firstChild.nodeValue = total_weeks;
+    document.getElementById('total-days').firstChild.nodeValue = total_days;
+    document.getElementById('total-hours').firstChild.nodeValue = total_hours;
+    document.getElementById('total-mins').firstChild.nodeValue = total_mins;
+    document.getElementById('total-secs').firstChild.nodeValue = total_secs;
+    
+    
 
     clearTimeout(upTime.to);
     upTime.to=setTimeout(function(){ upTime(countTo); },1000);

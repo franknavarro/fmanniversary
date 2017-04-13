@@ -114,15 +114,15 @@ Font Layout
 }
 
 .align-content .block-content {
-    margin-bottom: 25px;
+    padding-bottom: 25px;
 }
 
 #diff-times .block-content {
-    margin-bottom: 6em;
+    padding-bottom: 6em;
 }
 
 #diff-times .block-content:nth-child(n+5) {
-    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 @media (max-width:350px) {
@@ -132,18 +132,6 @@ Font Layout
 
     .timeamount {
         font-size: 1.75em;
-    }
-
-    .timelabel {
-        font-size: 1em;
-    }
-
-    .align-content .block-content * {
-        margin: 0px;
-    }
-
-    .align-content .block-content {
-        margin-bottom: 25px;
     }
 }
 
